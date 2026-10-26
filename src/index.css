@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#3E5F4D] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#2A4335] active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#AFC8B4] bg-white px-5 py-2.5 text-sm font-semibold text-[#3E5F4D] transition-all hover:bg-[#F6F9F7] active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#D8C7A6] px-5 py-2.5 text-sm font-bold text-[#17281F] shadow-sm transition-all hover:bg-[#C7B18A] active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-charcoal/70 transition-all hover:bg-sage-100 hover:text-forest;
+  }
+
+  .card {
+    @apply rounded-2xl border border-[#AFC8B4]/40 bg-white shadow-sm transition-shadow;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-[#AFC8B4]/60 bg-white px-3.5 py-2.5 text-sm text-charcoal placeholder-charcoal/40 transition-all focus:border-[#6F8F7B] focus:outline-none focus:ring-2 focus:ring-[#AFC8B4]/40;
+  }
+
+  .label-field {
+    @apply mb-1.5 block text-sm font-semibold text-charcoal/80;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+}
+
+/* Custom scrollbar using Botanical Sage palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #AFC8B4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6F8F7B;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
